@@ -24,13 +24,13 @@ PACKAGING INSTRUCTIONS
 ----------------------
 You can create a bootable CD image from the output. Bootable CDs work by emulating a bootable floppy disk, so we need to create a bootable floppy image first, then create an ISO out of that. You can burn this or mount it in an emulator.
 
-Create a blank 1.44MB floppy image: 
-(You only need to do this once.)
+Create a blank 1.44MB floppy image.
+You only need to do this once.
 
     > fsutil file createnew bootloader.flp 1440000
 
-Make an empty directory (which would contain the files on our CD ISO if we had any):
-(You only need to do this once.)
+Make an empty directory (which would contain the files on our CD ISO if we had any).
+You only need to do this once.
 
     > mkdir tmp
 
