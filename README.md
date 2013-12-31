@@ -26,15 +26,18 @@ You can create a bootable CD image from the output. Bootable CDs work by emulati
 
 Create a blank 1.44MB floppy image: 
 (You only need to do this once.)
+
     > fsutil file createnew bootloader.flp 1440000
 
 Make an empty directory (which would contain the files on our CD ISO if we had any):
 (You only need to do this once.)
+
     > mkdir tmp
 
 Use DD to blit our 512B bootstrapper to the start of the floppy image:
+
     > dd if=bootloader.com of=bootloader.flp seek=0 skip=0 bs=512 count=1
 
 Create an ISO image from our 1.44MB floppy image and the empty tmp dir:
-    > mkisofs -o bootloader.iso -b bootloader.flp tmp
 
+    > mkisofs -o bootloader.iso -b bootloader.flp tmp
